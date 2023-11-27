@@ -1,3 +1,4 @@
+import NavBar from '@/components/NavBar';
 import '@/styles/globals.css';
 import { Raleway } from 'next/font/google';
 import Head from 'next/head';
@@ -14,7 +15,9 @@ export default function App({ Component, pageProps }) {
                 />
                 <link rel='icon' href='/favicon.ico' />
             </Head>
+
             <main className={`${raleway.variable} bg-light w-full min-h-screen`}>
+                <NavBar/>
                 <Component {...pageProps} />
             </main>
         </>
