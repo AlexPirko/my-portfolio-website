@@ -46,7 +46,7 @@ const NavBar = () => {
                     <GithubIcon />
                 </motion.a>
                 <motion.a
-                    href='https://www.instagram.com/'
+                    href='https://web.telegram.org/k/#@youzhny_dev'
                     target={'_blank'}
                     whileHover={{ y: 3 }}
                     whileTap={{ scale: 0.9 }}
