@@ -6,6 +6,9 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { useInView, useMotionValue, useSpring } from 'framer-motion';
 import Skills from '@/components/Skills';
+import Experince from '@/components/Experince';
+import Education from '@/components/Education';
+import Courses from '@/components/Courses';
 
 const AnimatedNum = ({ value }) => {
     const ref = useRef(null);
@@ -110,7 +113,10 @@ const about = () => {
                             </div>
                         </div>
                     </div>
-                    <Skills/>
+                    <Skills />
+                    <Courses />
+                    <Education />
+                    <Experince />
                 </Layout>
             </main>
         </>
