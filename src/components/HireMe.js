@@ -8,7 +8,11 @@ const HireMe = () => {
             className='fixed left-12 bottom-12 flex items-center justify-center
      overflow-hidden'>
             <div className='w-32 h-auto flex items-center justify-center relative'>
-                <LogoSecondary className={'fill-slate-800 animate-spin-slow'} />
+                <LogoSecondary
+                    className={
+                        'animate-spin-slow dark:filter dark:invert dark:md:invert-1'
+                    }
+                />
 
                 <Link
                     href='mailto:youzhny.foto@gmail.com'

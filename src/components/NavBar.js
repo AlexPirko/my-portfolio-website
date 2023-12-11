@@ -4,7 +4,15 @@ import { motion } from 'framer-motion';
 
 import Logo from './Logo';
 import { useRouter } from 'next/router';
-import { GithubIcon, Instagram, LinkedInIcon, Telegram } from './SocialIcons';
+import {
+    GithubIcon,
+    Instagram,
+    LinkedInIcon,
+    MoonIcon,
+    SunIcon,
+    Telegram,
+} from './SocialIcons';
+import useThemeSwitcher from '@/hooks/useThemeSwitcher';
 
 const CustomLink = ({ href, title, className = '' }) => {
     const router = useRouter();
@@ -13,7 +21,7 @@ const CustomLink = ({ href, title, className = '' }) => {
             {title}
 
             <span
-                className={`h-[2px] inline-block bg-dark absolute left-0 -bottom-1 group-hover:w-full transition-[width] ease duration-400
+                className={`h-[2px] inline-block bg-dark dark:bg-light absolute left-0 -bottom-1 group-hover:w-full transition-[width] ease duration-400
             ${router.asPath === href ? 'w-full' : 'w-0'}`}>
                 &nbsp;
             </span>
@@ -22,8 +30,10 @@ const CustomLink = ({ href, title, className = '' }) => {
 };
 
 const NavBar = () => {
+    const [mode, setMode] = useThemeSwitcher();
+
     return (
-        <header className='w-full px-36 pt-16 flex items-center justify-between font-medium'>
+        <header className='w-full px-36 pt-16 flex items-center justify-between font-medium dark:text-light'>
             <nav>
                 <CustomLink href='/' title='Home' className='mr-4' />
                 <CustomLink
@@ -66,9 +76,21 @@ const NavBar = () => {
                     target={'_blank'}
                     whileHover={{ y: 3 }}
                     whileTap={{ scale: 0.9 }}
-                    className='w-7 ml-3'>
+                    className='w-7 mx-3'>
                     <Instagram />
                 </motion.a>
+
+                <button
+                    className='ml-8'
+                    onClick={() =>
+                        setMode(mode === 'light' ? 'dark' : 'light')
+                    }>
+                    {mode === 'dark' ? (
+                        <SunIcon className={'fill-slate-800'} />
+                    ) : (
+                        <MoonIcon className={'fill-slate-800'} />
+                    )}
+                </button>
             </div>
         </header>
     );

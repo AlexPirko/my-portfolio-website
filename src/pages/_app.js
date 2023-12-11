@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }) {
                 <link rel='icon' href='/favicon.ico' />
             </Head>
 
-            <main className={`${raleway.variable} bg-light w-full`}>
+            <main className={`${raleway.variable} bg-light dark:bg-dark w-full`}>
                 <NavBar/>
                 <Component {...pageProps} />
             </main>

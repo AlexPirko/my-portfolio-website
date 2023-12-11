@@ -4,13 +4,13 @@ import Link from 'next/link';
 
 const Footer = () => {
     return (
-        <footer className='w-full border-t-2 border-solid border-slate-900 font-medium text-lg'>
-            <Layout className='py-8 flex items-center justify-between text-slate-900'>
+        <footer className='w-full border-t-2 border-solid border-slate-900 dark:border-light font-medium text-lg'>
+            <Layout className='py-8 flex items-center justify-between text-slate-900 dark:text-light'>
                 <span>
                     {new Date().getFullYear()} &copy; All Rights Reserved
                 </span>
                 <span>
-                    Wellcom to my&nbsp;
+                    Wellcome to my&nbsp;
                     <Link
                         className='underline underline-offset-2'
                         href='https://github.com/AlexPirko'

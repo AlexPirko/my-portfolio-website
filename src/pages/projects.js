@@ -17,7 +17,7 @@ const FeaturedProject = ({
     github,
 }) => {
     return (
-        <article className='w-full flex items-center justify-between rounded-3xl boder border-solid border-dark bg-light shadow-2xl p-12'>
+        <article className='w-full flex items-center justify-between rounded-3xl boder border-solid border-dark bg-light dark:bg-slate-800 shadow-2xl p-12'>
             <div
                 className='w-1/2 
             
@@ -26,18 +26,18 @@ const FeaturedProject = ({
             </div>
 
             <div className='w-1/2 flex flex-col items-start justify-between pl-6'>
-                <span className='text-primary font-medium text-xl'>{type}</span>
+                <span className='text-primary font-medium text-xl dark:text-slate-300'>{type}</span>
                 <Link
                     href={cl_link}
                     target='_blank'
                     className='hover:underline underline-offset-2'>
-                    <h2 className='my-2 w-full text-left text-4xl font-bold'>
+                    <h2 className='my-2 w-full text-left text-4xl font-bold dark:text-light'>
                         {title}
                     </h2>
                 </Link>
-                <p className='my-2 font-medium text-dark'>{summary}</p>
+                <p className='my-2 font-medium text-dark dark:text-light'>{summary}</p>
                 <div className='mt-2 flex items-center'>
-                    <Link href={github} target='_blank' className='w-10'>
+                    <Link href={github} target='_blank' className='w-10 dark:bg-light dark:rounded-3xl'>
                         <GithubIcon />
                     </Link>
                     <Link
@@ -60,18 +60,18 @@ const FeaturedProject = ({
 
 const Project = ({ title, type, img, link, github }) => {
     return (
-        <article className='w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative'>
+        <article className='w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light dark:bg-slate-800 p-6 relative'>
             <div className='w-full overflow-hidden rounded-lg'>
                 <Image src={img} alt={title} className='w-full h-auto' />
             </div>
 
             <div className='w-full flex flex-col items-start justify-between mt-4'>
-                <span className='text-primary font-medium text-xl'>{type}</span>
+                <span className='text-primary font-medium text-xl dark:text-slate-300'>{type}</span>
                 <Link
                     href={link}
                     target='_blank'
                     className='hover:underline underline-offset-2'>
-                    <h2 className='my-2 w-full text-left text-3xl font-bold'>
+                    <h2 className='my-2 w-full text-left text-3xl font-bold dark:text-light'>
                         {title}
                     </h2>
                 </Link>
@@ -79,10 +79,10 @@ const Project = ({ title, type, img, link, github }) => {
                     <Link
                         href={link}
                         target='_blank'
-                        className='text-lg font-semibold underline'>
+                        className='text-lg font-semibold underline dark:text-light'>
                         Visit Project
                     </Link>
-                    <Link href={github} target='_blank' className='w-8'>
+                    <Link href={github} target='_blank' className='w-8 dark:bg-light dark:rounded-2xl'>
                         <GithubIcon />
                     </Link>
                 </div>
