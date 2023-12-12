@@ -22,11 +22,19 @@ const FeaturedProject = ({
                 className='w-1/2 
             
             overflow-hidden rounded-lg'>
-                <Image src={img} alt={title} className='w-full h-auto' />
+                <Image
+                    src={img}
+                    alt={title}
+                    className='w-full h-auto'
+                    priority
+                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                />
             </div>
 
             <div className='w-1/2 flex flex-col items-start justify-between pl-6'>
-                <span className='text-primary font-medium text-xl dark:text-slate-300'>{type}</span>
+                <span className='text-primary font-medium text-xl dark:text-slate-300'>
+                    {type}
+                </span>
                 <Link
                     href={cl_link}
                     target='_blank'
@@ -35,9 +43,14 @@ const FeaturedProject = ({
                         {title}
                     </h2>
                 </Link>
-                <p className='my-2 font-medium text-dark dark:text-light'>{summary}</p>
+                <p className='my-2 font-medium text-dark dark:text-light'>
+                    {summary}
+                </p>
                 <div className='mt-2 flex items-center'>
-                    <Link href={github} target='_blank' className='w-10 dark:bg-light dark:rounded-3xl'>
+                    <Link
+                        href={github}
+                        target='_blank'
+                        className='w-10 dark:bg-light dark:rounded-3xl'>
                         <GithubIcon />
                     </Link>
                     <Link
@@ -62,11 +75,19 @@ const Project = ({ title, type, img, link, github }) => {
     return (
         <article className='w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light dark:bg-slate-800 p-6 relative'>
             <div className='w-full overflow-hidden rounded-lg'>
-                <Image src={img} alt={title} className='w-full h-auto' />
+                <Image
+                    src={img}
+                    alt={title}
+                    className='w-full h-auto'
+                    priority
+                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                />
             </div>
 
             <div className='w-full flex flex-col items-start justify-between mt-4'>
-                <span className='text-primary font-medium text-xl dark:text-slate-300'>{type}</span>
+                <span className='text-primary font-medium text-xl dark:text-slate-300'>
+                    {type}
+                </span>
                 <Link
                     href={link}
                     target='_blank'
@@ -82,7 +103,10 @@ const Project = ({ title, type, img, link, github }) => {
                         className='text-lg font-semibold underline dark:text-light'>
                         Visit Project
                     </Link>
-                    <Link href={github} target='_blank' className='w-8 dark:bg-light dark:rounded-2xl'>
+                    <Link
+                        href={github}
+                        target='_blank'
+                        className='w-8 dark:bg-light dark:rounded-2xl'>
                         <GithubIcon />
                     </Link>
                 </div>
