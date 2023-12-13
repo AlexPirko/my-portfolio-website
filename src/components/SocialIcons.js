@@ -108,8 +108,8 @@ export const Instagram = ({ className, ...rest }) => (
 export const SunIcon = ({ className, ...rest }) => (
     <svg
         xmlns='http://www.w3.org/2000/svg'
-        width='24'
-        height='24'
+        width='36px'
+        height='36px'
         viewBox='0 0 24 24'
         {...rest}
         className={`w-full h-auto ${className}`}>

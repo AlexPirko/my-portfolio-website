@@ -9,6 +9,7 @@ import Skills from '@/components/Skills';
 import Experince from '@/components/Experince';
 import Education from '@/components/Education';
 import Courses from '@/components/Courses';
+import TransitionEff from '@/components/TransitionEff';
 
 const AnimatedNum = ({ value }) => {
     const ref = useRef(null);
@@ -41,15 +42,15 @@ const about = () => {
                 <title>Alex Pirko developer | About Page</title>
                 <meta name='description' content='my description' />
             </Head>
-
+            <TransitionEff />
             <main className='flex w-full flex-col items-center justify-center'>
-                <Layout className='pt-16'>
+                <Layout className='pt-16 lg:!pt-24'>
                     <AnimatedTitle
                         text='Passion Fuels Purpose!'
-                        className='mb-16'
+                        className='mb-16 lg:!text-6xl md:!text-5xl sm:!text-3xl sm:mb-12'
                     />
-                    <div className='grid w-full grid-cols-8 gap-16'>
-                        <div className='col-span-3 flex flex-col items-start justify-start'>
+                    <div className='grid w-full grid-cols-8 gap-16 xl:gap-8'>
+                        <div className='col-span-3 flex flex-col items-start justify-start xl:col-span-4 xl:items-center lg:order-2 lg:col-span-8'>
                             <h2 className='my-4 text-lg font-bold uppercase text-dark/70 dark:text-light/75'>
                                 Biography
                             </h2>
@@ -78,38 +79,38 @@ const about = () => {
                                 to travel.
                             </p>
                         </div>
-                        <div className='col-span-3 relative w-max h-max rounded-2xl border-2 border-solid border-dark bg-light p-8'>
+                        <div className='col-span-3 relative w-max h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 2xl:col-span-4 lg:order-1 lg:col-span-8 lg:m-auto'>
                             <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark' />
                             <Image
                                 src={aboutPic}
                                 alt="Developer's foto"
-                                className='h-auto w-96 rounded-2xl'
+                                className='h-auto w-96 rounded-2xl xs:w-72 sd:w-64'
                                 priority
                                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                             />
                         </div>
-                        <div className='col-span-2 flex flex-col items-end justify-between'>
-                            <div className='flex flex-col items-end justify-center'>
-                                <span className='inline-block text-6xl font-bold dark:text-light'>
+                        <div className='col-span-2 flex flex-col items-end justify-between 2xl:col-span-8 2xl:flex-row lg:order-3 lg:mt-16 sm:mt-8'>
+                            <div className='flex flex-col items-end justify-center 2xl:items-center xs:items-start'>
+                                <span className='inline-block text-6xl font-bold dark:text-light lg:text-5xl sm:text-4xl xs:text-3xl'>
                                     <AnimatedNum value={4000} />+
                                 </span>
-                                <h2 className='text-2xl font-medium capitalize text-dark/70 dark:text-light/75'>
+                                <h2 className='text-2xl font-medium capitalize text-dark/70 dark:text-light/75 lg:text-xl sm:text-base xs:text-sm'>
                                     hours of training
                                 </h2>
                             </div>
-                            <div className='flex flex-col items-end justify-center'>
-                                <span className='inline-block text-6xl font-bold dark:text-light'>
+                            <div className='flex flex-col items-end justify-center 2xl:items-center xs:items-start xs:px-4'>
+                                <span className='inline-block text-6xl font-bold dark:text-light lg:text-5xl sm:text-4xl xs:text-3xl'>
                                     <AnimatedNum value={50} />+
                                 </span>
-                                <h2 className='text-2xl font-medium capitalize text-dark/70 dark:text-light/75'>
+                                <h2 className='text-2xl font-medium capitalize text-dark/70 dark:text-light/75 lg:text-xl sm:text-base xs:text-sm'>
                                     projects completed
                                 </h2>
                             </div>
-                            <div className='flex flex-col items-end justify-center'>
-                                <span className='inline-block text-6xl font-bold dark:text-light'>
+                            <div className='flex flex-col items-end justify-center 2xl:items-center xs:items-start'>
+                                <span className='inline-block text-6xl font-bold dark:text-light lg:text-5xl sm:text-4xl xs:text-3xl'>
                                     <AnimatedNum value={1} />+
                                 </span>
-                                <h2 className='text-2xl font-medium capitalize text-dark/70 dark:text-light/75'>
+                                <h2 className='text-2xl font-medium capitalize text-dark/70 dark:text-light/75 lg:text-xl sm:text-base xs:text-sm'>
                                     years of experience
                                 </h2>
                             </div>

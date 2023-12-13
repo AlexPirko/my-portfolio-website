@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import project2 from '../../public/project-2.jpg';
+import TransitionEff from '@/components/TransitionEff';
 
 const FeaturedProject = ({
     type,
@@ -17,11 +18,8 @@ const FeaturedProject = ({
     github,
 }) => {
     return (
-        <article className='w-full flex items-center justify-between rounded-3xl boder border-solid border-dark bg-light dark:bg-slate-800 shadow-2xl p-12'>
-            <div
-                className='w-1/2 
-            
-            overflow-hidden rounded-lg'>
+        <article className='w-full flex items-center justify-between rounded-3xl boder border-solid border-dark bg-light dark:bg-slate-800 shadow-2xl p-12 xl:flex-col xl:px-16 xl:gap-y-8 md:px-10 xs:rounded-2xl xs:rounded-br-3xl xs:p-4'>
+            <div className='w-1/2 overflow-hidden rounded-lg xl:w-full'>
                 <Image
                     src={img}
                     alt={title}
@@ -31,7 +29,7 @@ const FeaturedProject = ({
                 />
             </div>
 
-            <div className='w-1/2 flex flex-col items-start justify-between pl-6'>
+            <div className='w-1/2 flex flex-col items-start justify-between pl-6 xl:w-full'>
                 <span className='text-primary font-medium text-xl dark:text-slate-300'>
                     {type}
                 </span>
@@ -39,32 +37,34 @@ const FeaturedProject = ({
                     href={cl_link}
                     target='_blank'
                     className='hover:underline underline-offset-2'>
-                    <h2 className='my-2 w-full text-left text-4xl font-bold dark:text-light'>
+                    <h2 className='my-2 w-full text-left text-4xl font-bold dark:text-light md:text-3xl sm:text-2xl'>
                         {title}
                     </h2>
                 </Link>
                 <p className='my-2 font-medium text-dark dark:text-light'>
                     {summary}
                 </p>
-                <div className='mt-2 flex items-center'>
+                <div className='mt-2 flex items-center xs:m-auto xs:gap-x-5 xs:mt-2'>
                     <Link
                         href={github}
                         target='_blank'
-                        className='w-10 dark:bg-light dark:rounded-3xl'>
+                        className='w-10 dark:bg-light dark:rounded-3xl xs:w-14'>
                         <GithubIcon />
                     </Link>
-                    <Link
-                        href={srv_link}
-                        target='_blank'
-                        className='ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold'>
-                        Start the Server
-                    </Link>
-                    <Link
-                        href={cl_link}
-                        target='_blank'
-                        className='ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold'>
-                        Visit Project
-                    </Link>
+                    <div className='flex xs:flex-col xs:gap-y-2'>
+                        <Link
+                            href={srv_link}
+                            target='_blank'
+                            className='ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold md:text-base md:p-1.5 md:px-3'>
+                            Start the Server
+                        </Link>
+                        <Link
+                            href={cl_link}
+                            target='_blank'
+                            className='ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold md:text-base md:p-1.5 md:px-3'>
+                            Visit Project
+                        </Link>
+                    </div>
                 </div>
             </div>
         </article>
@@ -92,7 +92,7 @@ const Project = ({ title, type, img, link, github }) => {
                     href={link}
                     target='_blank'
                     className='hover:underline underline-offset-2'>
-                    <h2 className='my-2 w-full text-left text-3xl font-bold dark:text-light'>
+                    <h2 className='my-2 w-full text-left text-3xl font-bold dark:text-light md:text-2xl'>
                         {title}
                     </h2>
                 </Link>
@@ -100,7 +100,7 @@ const Project = ({ title, type, img, link, github }) => {
                     <Link
                         href={link}
                         target='_blank'
-                        className='text-lg font-semibold underline dark:text-light'>
+                        className='text-lg font-semibold underline dark:text-light md:text-base'>
                         Visit Project
                     </Link>
                     <Link
@@ -122,15 +122,15 @@ const projects = () => {
                 <title>Alex Pirko developer | Projects Page</title>
                 <meta name='description' content='my description' />
             </Head>
-
+            <TransitionEff />
             <main className='flex w-full flex-col items-center justify-center'>
-                <Layout className='pt-16'>
+                <Layout className='pt-16 lg:!pt-24'>
                     <AnimatedTitle
                         text='Great Projects For You!'
-                        className='mb-16'
+                        className='mb-16 lg:!text-6xl md:!text-5xl sm:!text-3xl sm:mb-8'
                     />
 
-                    <div className='grid grid-cols-12 gap-24'>
+                    <div className='grid grid-cols-12 gap-24 xl:gap-x-16 lg:gap-x-8 md:gap-y-16 sm:gap-x-4'>
                         <div className='col-span-12'>
                             <FeaturedProject
                                 type='Fullstack Project'
@@ -142,7 +142,7 @@ const projects = () => {
                                 github='https://github.com/AlexPirko/MERN-blog-client'
                             />
                         </div>
-                        <div className='col-span-6'>
+                        <div className='col-span-6 xs:col-span-12'>
                             <Project
                                 type='Fullstack Project'
                                 title='MERN simple blog'
@@ -152,7 +152,7 @@ const projects = () => {
                                 github='https://github.com/AlexPirko/MERN-blog-client'
                             />
                         </div>
-                        <div className='col-span-6'>
+                        <div className='col-span-6 xs:col-span-12'>
                             <Project
                                 type='Fullstack Project'
                                 title='MERN simple blog'
@@ -173,7 +173,7 @@ const projects = () => {
                                 github='https://github.com/AlexPirko/MERN-blog-client'
                             />
                         </div>
-                        <div className='col-span-6'>
+                        <div className='col-span-6 xs:col-span-12'>
                             <Project
                                 type='Fullstack Project'
                                 title='MERN simple blog'
@@ -183,7 +183,7 @@ const projects = () => {
                                 github='https://github.com/AlexPirko/MERN-blog-client'
                             />
                         </div>
-                        <div className='col-span-6'>
+                        <div className='col-span-6 xs:col-span-12'>
                             <Project
                                 type='Fullstack Project'
                                 title='MERN simple blog'

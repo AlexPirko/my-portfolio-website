@@ -7,13 +7,14 @@ const Details = ({ type, time, place, info }) => {
     return (
         <li
             ref={ref}
-            className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-start justify-between'>
+            className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-start justify-between md:w-[80%]'>
             <ListIcon referance={ref} />
             <motion.div
                 initial={{ y: 50 }}
                 whileInView={{ y: 0 }}
-                transition={{ duration: 0.5, type: 'spring' }}>
-                <h3 className='capitalize font-bold text-2xl dark:text-light'>{type}</h3>
+                transition={{ duration: 0.5, type: 'spring' }}
+                className='md:pl-6'>
+                <h3 className='capitalize font-bold text-2xl dark:text-light md:text-xl'>{type}</h3>
                 <span className='capitalize font-medium text-dark/75 dark:text-light/75'>
                     {time} | {place}
                 </span>
@@ -30,8 +31,8 @@ const Courses = () => {
         offset: ['start end', 'center start'],
     });
     return (
-        <div className='my-64'>
-            <h2 className='font-bold text-8xl mb-32 w-full text-center dark:text-light'>
+        <div className='my-64 xl:my-36'>
+            <h2 className='font-bold text-8xl mb-32 w-full text-center dark:text-light lg:text-5xl lg:mb-20 xl:mt-16 xs:text-4xl'>
                 Courses
             </h2>
 
