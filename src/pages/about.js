@@ -56,27 +56,29 @@ const about = () => {
                             </h2>
                             <p className='font-medium dark:text-light'>
                                 Hi, I’m frontend developer with 1+ years of
-                                nonprofit experience. I have extensive life and
-                                work experience, both in a large team and as a
-                                self employed. Now I spend all my time learning
-                                Redux and Nest JS. I play chess, football, love
-                                to travel.
+                                experience. In 2023, I successfully graduated
+                                from RSSchool, an EPAM-based programming school.
+                                During the training, I made several dozen
+                                projects, both pure JavaScript or TypeScript,
+                                and in React/Redux and NextJS. The projects were
+                                both individual and team, under the guidance of
+                                a mentor.
                             </p>
                             <p className='my-4 font-medium dark:text-light'>
-                                Hi, I’m frontend developer with 1+ years of
-                                nonprofit experience. I have extensive life and
-                                work experience, both in a large team and as a
-                                self employed. Now I spend all my time learning
-                                Redux and Nest JS. I play chess, football, love
-                                to travel.
+                                Recently, I independently studied the basics of
+                                NodeJS, Express, NestJS and various database
+                                management systems, such as MongoDB and
+                                PostgreSQL, completed several full-stack
+                                projects. Currently learning React Native and
+                                Docker.
                             </p>
                             <p className='font-medium dark:text-light'>
-                                Hi, I’m frontend developer with 1+ years of
-                                nonprofit experience. I have extensive life and
-                                work experience, both in a large team and as a
-                                self employed. Now I spend all my time learning
-                                Redux and Nest JS. I play chess, football, love
-                                to travel.
+                                I have extensive life and work experience, both
+                                in a large team and as a self employed. Among my
+                                strong character traits I can note: high
+                                discipline and diligence, good learning ability
+                                and self-responsibility In free time, I play
+                                chess, football, love to travel.
                             </p>
                         </div>
                         <div className='col-span-3 relative w-max h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 2xl:col-span-4 lg:order-1 lg:col-span-8 lg:m-auto'>

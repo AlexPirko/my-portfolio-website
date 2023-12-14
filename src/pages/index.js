@@ -21,7 +21,7 @@ export default function Home() {
             <div className='flex items-center m-auto text-dark dark:text-light w-10/12 min-h-screen'>
                 <Layout className='pt-0 md:pt-16 sm:pt-8'>
                     <div className='flex items-center justify-between w-full gap-10 lg:flex-col'>
-                        <div className='w-1/3 lg:w-1/2 md:w-2/3 sm:w-full'>
+                        <div className='w-2/5 xl:w-1/2 md:w-2/3 sm:w-full'>
                             <Image
                                 src={profileImg}
                                 alt='Developer profile image'
@@ -30,17 +30,18 @@ export default function Home() {
                                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                             />
                         </div>
-                        <div className='w-2/3 flex flex-col items-center self-center lg:w-full'>
+                        <div className='w-3/5 flex flex-col items-center self-center xl:w-1/2 lg:w-full'>
                             <AnimatedTitle
                                 text='Turning Vision Into Reality'
-                                className='!text-6xl !text-left lg:!text-6xl lg:!text-center md:!text-5xl sm:!text-3xl'
+                                className='!text-6xl !text-left xl:!text-5xl lg:!text-center md:!text-5xl sm:!text-3xl'
                             />
-                            <p className='my-10 text-base font-medium md:my-6'>
-                                As a skilled full-stack developer, I am
-                                dedicated to turning ideas into innovative web
-                                applications. Explore my latest projects and
-                                articles, showcasing my expertise in React.js
-                                and web development.
+                            <p className='my-10 text-xl font-medium md:my-6 xl:text-base'>
+                                As a person who is madly in love with my
+                                profession, I do my work to the highest possible
+                                quality. I am dedicated to turning ideas into
+                                innovative web applications. Explore my latest
+                                projects, showcasing my expertise in frontend
+                                web development.
                             </p>
                             <div className='flex items-center self-start mt-2 lg:text-center md:self-center'>
                                 <Link
