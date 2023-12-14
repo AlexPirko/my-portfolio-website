@@ -6,6 +6,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import project2 from '../../public/project-2.jpg';
+import project3 from '../../public/project-3.jpg';
+import project4 from '../../public/project-4.jpg';
+import project5 from '../../public/project-5.jpg';
+import project6 from '../../public/project-6.jpg';
 import TransitionEff from '@/components/TransitionEff';
 
 const FeaturedProject = ({
@@ -37,11 +41,11 @@ const FeaturedProject = ({
                     href={cl_link}
                     target='_blank'
                     className='hover:underline underline-offset-2'>
-                    <h2 className='my-2 w-full text-left text-4xl font-bold dark:text-light md:text-3xl sm:text-2xl'>
+                    <h2 className='mt-6 w-full text-left text-4xl font-bold dark:text-light md:text-3xl sm:text-2xl xl:my-2'>
                         {title}
                     </h2>
                 </Link>
-                <p className='my-2 font-medium text-dark dark:text-light'>
+                <p className='my-8 font-medium text-dark dark:text-light xl:my-2'>
                     {summary}
                 </p>
                 <div className='mt-2 flex items-center xs:m-auto xs:gap-x-5 xs:mt-2'>
@@ -144,22 +148,20 @@ const projects = () => {
                         </div>
                         <div className='col-span-6 xs:col-span-12'>
                             <Project
-                                type='Fullstack Project'
-                                title='MERN simple blog'
-                                summary='Simple blog built using React on JavaScript and Redux; server part - NodeJS + Express + MongoDB. The project is a blog where the user can register, as well as write, edit and delete posts, add comments and tags.'
-                                img={project2}
-                                link='https://mern-blog-client-chi.vercel.app/'
-                                github='https://github.com/AlexPirko/MERN-blog-client'
+                                type='Frontend Project'
+                                title='React / Redux Fancy Online-Shop'
+                                img={project3}
+                                link='https://react-fancy-shop.netlify.app/'
+                                github='https://github.com/AlexPirko/react-fancy-shop'
                             />
                         </div>
                         <div className='col-span-6 xs:col-span-12'>
                             <Project
-                                type='Fullstack Project'
-                                title='MERN simple blog'
-                                summary='Simple blog built using React on JavaScript and Redux; server part - NodeJS + Express + MongoDB. The project is a blog where the user can register, as well as write, edit and delete posts, add comments and tags.'
-                                img={project2}
-                                link='https://mern-blog-client-chi.vercel.app/'
-                                github='https://github.com/AlexPirko/MERN-blog-client'
+                                type='Team Project'
+                                title='Online Store on Pure TS / OOP'
+                                img={project4}
+                                link='https://alexpirko.github.io/online-store-team/#product-list-page'
+                                github='https://github.com/AlexPirko/online-store-team'
                             />
                         </div>
                         <div className='col-span-12'>
@@ -175,22 +177,20 @@ const projects = () => {
                         </div>
                         <div className='col-span-6 xs:col-span-12'>
                             <Project
-                                type='Fullstack Project'
-                                title='MERN simple blog'
-                                summary='Simple blog built using React on JavaScript and Redux; server part - NodeJS + Express + MongoDB. The project is a blog where the user can register, as well as write, edit and delete posts, add comments and tags.'
-                                img={project2}
-                                link='https://mern-blog-client-chi.vercel.app/'
-                                github='https://github.com/AlexPirko/MERN-blog-client'
+                                type='Frontend Project'
+                                title='Shelter_PixelPerfect'
+                                img={project5}
+                                link='https://shelter-pixel-perfect.netlify.app/'
+                                github='https://github.com/AlexPirko/shelter-pixel_perfect'
                             />
                         </div>
                         <div className='col-span-6 xs:col-span-12'>
                             <Project
-                                type='Fullstack Project'
-                                title='MERN simple blog'
-                                summary='Simple blog built using React on JavaScript and Redux; server part - NodeJS + Express + MongoDB. The project is a blog where the user can register, as well as write, edit and delete posts, add comments and tags.'
-                                img={project2}
-                                link='https://mern-blog-client-chi.vercel.app/'
-                                github='https://github.com/AlexPirko/MERN-blog-client'
+                                type='Educational Project'
+                                title='Virtual Keyboard on Pure JS'
+                                img={project6}
+                                link='https://alexpirko.github.io/virtual-keyboard/'
+                                github='https://github.com/AlexPirko/virtual-keyboard'
                             />
                         </div>
                     </div>

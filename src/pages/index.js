@@ -44,7 +44,7 @@ export default function Home() {
                             </p>
                             <div className='flex items-center self-start mt-2 lg:text-center md:self-center'>
                                 <Link
-                                    href='/'
+                                    href='https://drive.google.com/file/d/17On2Qu99YlziVMJmrijsIwIqRanPmK_Q/view?usp=drive_link'
                                     target={'_blank'}
                                     className='flex items-center bg-slate-900 text-light dark:bg-light dark:font-medium dark:text-dark p-1.5 px-6 rounded-lg text-lg font-semibolg hover:bg-light hover:text-slate-900 border-2 border-solid border-transparent hover:border-slate-900 transition-all duration-500'>
                                     Resume

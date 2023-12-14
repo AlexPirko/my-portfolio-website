@@ -1,5 +1,5 @@
 import React from 'react';
-import { LogoSecondary } from './SocialIcons';
+import { EmailIcon, LogoSecondary } from './SocialIcons';
 import Link from 'next/link';
 
 const HireMe = () => {
@@ -16,11 +16,11 @@ const HireMe = () => {
 
                 <Link
                     href='mailto:youzhny.foto@gmail.com'
+                    target={'_blank'}
                     className='flex items-center justify-center absolute left-1/2 top-1/2 
-                    -translate-x-1/2 -translate-y-1/2 bg-slate-900 text-light font-semibold 
-                    shadow-md border border-solid border-slate-900 w-16 h-16 rounded-full
-                    hover:bg-light hover:text-slate-800 md:w-12 md:h-12 md:text-[10px]'>
-                    HireMe
+                    -translate-x-1/2 -translate-y-1/2 bg-slate-900 shadow-md dark:bg-light
+                    border border-solid border-slate-900 w-16 h-16 rounded-full md:w-11 md:h-11'>
+                    <EmailIcon className='w-7 dark:fill-dark hover:scale-125 md:w-5' />
                 </Link>
             </div>
         </div>
