@@ -1,6 +1,6 @@
 # My Promo Site
 
-![screen](https://github.com/AlexPirko/my-portfolio-website/assets/105494280/5738e5b0-dc23-45e5-aaab-bcea5245fe0d)
+![screen](https://github.com/AlexPirko/my-portfolio-website/assets/105494280/af9902fc-b652-4141-b283-b2339bc32751)
 
 
 ## Deploy
