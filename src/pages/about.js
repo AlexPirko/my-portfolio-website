@@ -35,12 +35,19 @@ const AnimatedNum = ({ value }) => {
     return <span ref={ref}></span>;
 };
 
+const imageLoader = ({ src, width, quality }) => {
+    return `https://profile.pirko.site/${src}?w=${width}&q=${quality || 75}`;
+};
+
 const about = () => {
     return (
         <>
             <Head>
                 <title>Alex Pirko developer | About Page</title>
-                <meta name='description' content='my description' />
+                <meta
+                    name='description'
+                    content='my description'
+                />
             </Head>
             <TransitionEff />
             <main className='flex w-full flex-col items-center justify-center'>
@@ -84,10 +91,12 @@ const about = () => {
                         <div className='col-span-3 relative w-max h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 2xl:col-span-4 lg:order-1 lg:col-span-8 lg:m-auto'>
                             <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark' />
                             <Image
-                                src={aboutPic}
+                                loader={imageLoader}
+                                src='/my-photo.jpg'
+                                width={600}
+                                height={600}
                                 alt="Developer's foto"
                                 className='h-auto w-96 rounded-2xl xs:w-72 sd:w-64'
-                                priority
                                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                             />
                         </div>

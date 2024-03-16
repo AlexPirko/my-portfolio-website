@@ -5,11 +5,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import project2 from '../../public/project-2.jpg';
-import project3 from '../../public/project-3.jpg';
-import project4 from '../../public/project-4.jpg';
-import project5 from '../../public/project-5.jpg';
-import project6 from '../../public/project-6.jpg';
 import TransitionEff from '@/components/TransitionEff';
 
 const FeaturedProject = ({
@@ -21,14 +16,21 @@ const FeaturedProject = ({
     cl_link,
     github,
 }) => {
+    const imageLoader = ({ src, width, quality }) => {
+        return `https://profile.pirko.site/${src}?w=${width}&q=${
+            quality || 75
+        }`;
+    };
     return (
         <article className='w-full flex items-center justify-between rounded-3xl boder border-solid border-dark bg-light dark:bg-slate-800 shadow-2xl p-12 xl:flex-col xl:px-16 xl:gap-y-8 md:px-10 xs:rounded-2xl xs:rounded-br-3xl xs:p-4'>
             <div className='w-1/2 overflow-hidden rounded-lg xl:w-full'>
                 <Image
+                    loader={imageLoader}
                     src={img}
                     alt={title}
+                    width={600}
+                    height={600}
                     className='w-full h-auto'
-                    priority
                     sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                 />
             </div>
@@ -56,12 +58,14 @@ const FeaturedProject = ({
                         <GithubIcon />
                     </Link>
                     <div className='flex xs:flex-col xs:gap-y-2'>
-                        <Link
-                            href={srv_link}
-                            target='_blank'
-                            className='ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold md:text-base md:p-1.5 md:px-3'>
-                            Start the Server
-                        </Link>
+                        {srv_link !== '' && (
+                            <Link
+                                href={srv_link}
+                                target='_blank'
+                                className='ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold md:text-base md:p-1.5 md:px-3'>
+                                Start the Server
+                            </Link>
+                        )}
                         <Link
                             href={cl_link}
                             target='_blank'
@@ -76,14 +80,21 @@ const FeaturedProject = ({
 };
 
 const Project = ({ title, type, img, link, github }) => {
+    const imageLoader = ({ src, width, quality }) => {
+        return `https://profile.pirko.site/${src}?w=${width}&q=${
+            quality || 75
+        }`;
+    };
     return (
         <article className='w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light dark:bg-slate-800 p-6 relative'>
             <div className='w-full overflow-hidden rounded-lg'>
                 <Image
+                    loader={imageLoader}
                     src={img}
                     alt={title}
+                    width={600}
+                    height={600}
                     className='w-full h-auto'
-                    priority
                     sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                 />
             </div>
@@ -124,7 +135,10 @@ const projects = () => {
         <>
             <Head>
                 <title>Alex Pirko developer | Projects Page</title>
-                <meta name='description' content='my description' />
+                <meta
+                    name='description'
+                    content='my description'
+                />
             </Head>
             <TransitionEff />
             <main className='flex w-full flex-col items-center justify-center'>
@@ -138,19 +152,48 @@ const projects = () => {
                         <div className='col-span-12'>
                             <FeaturedProject
                                 type='Fullstack Project'
-                                title='MERN simple blog'
-                                summary='Simple blog built using React on JavaScript and Redux; server part - NodeJS + Express + MongoDB. The project is a blog where the user can register, as well as write, edit and delete posts, add comments and tags.'
-                                img={project2}
-                                srv_link='https://pirko-mern-blog.onrender.com/'
-                                cl_link='https://mern-blog-client-chi.vercel.app/'
-                                github='https://github.com/AlexPirko/MERN-blog-client'
+                                title='Restaurant website'
+                                summary='Asian cuisine restaurant website with an integrated table reservation form build with Next.js, React, Prisma ORM, authentication; with admin page with users and orders info.'
+                                img='/project-7.jpg'
+                                srv_link=''
+                                cl_link='https://restaurant-chi-fu.vercel.app/'
+                                github='https://github.com/AlexPirko/restaurant-chi_fu'
+                            />
+                        </div>
+                        <div className='col-span-6 xs:col-span-12'>
+                            <Project
+                                type='HTML/Wordpress Project'
+                                title='Animated landing page'
+                                img='/project-8.jpg'
+                                link='https://pirko.site'
+                                github='https://github.com/AlexPirko/grizmans'
+                            />
+                        </div>
+                        <div className='col-span-6 xs:col-span-12'>
+                            <Project
+                                type='Frontend Project'
+                                title='My NextJS Promo Site '
+                                img='/project-9.jpg'
+                                link='https://profile.pirko.site/'
+                                github='https://github.com/AlexPirko/my-portfolio-website'
+                            />
+                        </div>
+                        <div className='col-span-12'>
+                            <FeaturedProject
+                                type='Fullstack Project'
+                                title='Pizza deliver site'
+                                summary='Full stack pizza delivery site build with Next.js, MongoDB, paypal integration, authentication; with admin page for creation menu, users and orders statistics.'
+                                img='/project-1.jpg'
+                                srv_link=''
+                                cl_link='https://pizza-fet.vercel.app/'
+                                github='https://github.com/AlexPirko/pizza_fet'
                             />
                         </div>
                         <div className='col-span-6 xs:col-span-12'>
                             <Project
                                 type='Frontend Project'
                                 title='React / Redux Fancy Online-Shop'
-                                img={project3}
+                                img='/project-3.jpg'
                                 link='https://react-fancy-shop.netlify.app/'
                                 github='https://github.com/AlexPirko/react-fancy-shop'
                             />
@@ -159,7 +202,7 @@ const projects = () => {
                             <Project
                                 type='Team Project'
                                 title='Online Store on Pure TS / OOP'
-                                img={project4}
+                                img='/project-4.jpg'
                                 link='https://alexpirko.github.io/online-store-team/#product-list-page'
                                 github='https://github.com/AlexPirko/online-store-team'
                             />
@@ -167,19 +210,19 @@ const projects = () => {
                         <div className='col-span-12'>
                             <FeaturedProject
                                 type='Fullstack Project'
-                                title='MERN simple blog'
-                                summary='Simple blog built using React on JavaScript and Redux; server part - NodeJS + Express + MongoDB. The project is a blog where the user can register, as well as write, edit and delete posts, add comments and tags.'
-                                img={project2}
-                                srv_link='https://pirko-mern-blog.onrender.com/'
-                                cl_link='https://mern-blog-client-chi.vercel.app/'
-                                github='https://github.com/AlexPirko/MERN-blog-client'
+                                title='Mobile web store'
+                                summary='Mobile web store built using NextJS on TypeScript, Effector, Framer-motion, Stripe; server part - NestJS + MariaDB. A modern online store with registration, remote payment, search, and filters based on four main criteria.'
+                                img='/project-10.jpg'
+                                srv_link=''
+                                cl_link='https://amobilec.up.railway.app/'
+                                github='https://github.com/AlexPirko/amobile-client'
                             />
                         </div>
                         <div className='col-span-6 xs:col-span-12'>
                             <Project
                                 type='Frontend Project'
                                 title='Shelter_PixelPerfect'
-                                img={project5}
+                                img='/project-5.jpg'
                                 link='https://shelter-pixel-perfect.netlify.app/'
                                 github='https://github.com/AlexPirko/shelter-pixel_perfect'
                             />
@@ -188,9 +231,20 @@ const projects = () => {
                             <Project
                                 type='Educational Project'
                                 title='Virtual Keyboard on Pure JS'
-                                img={project6}
+                                img='/project-6.jpg'
                                 link='https://alexpirko.github.io/virtual-keyboard/'
                                 github='https://github.com/AlexPirko/virtual-keyboard'
+                            />
+                        </div>
+                        <div className='col-span-12'>
+                            <FeaturedProject
+                                type='Fullstack Project'
+                                title='MERN simple blog'
+                                summary='Simple blog built using React on JavaScript and Redux; server part - NodeJS + Express + MongoDB. The project is a blog where the user can register, as well as write, edit and delete posts, add comments and tags.'
+                                img='/project-2.jpg'
+                                srv_link='https://pirko-mern-blog.onrender.com/'
+                                cl_link='https://mern-blog-client-chi.vercel.app/'
+                                github='https://github.com/AlexPirko/MERN-blog-client'
                             />
                         </div>
                     </div>

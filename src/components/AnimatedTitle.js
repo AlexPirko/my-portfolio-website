@@ -17,11 +17,11 @@ const quote = {
 const word = {
     initial: {
         opacity: 0,
-        y:50,
+        y: 50,
     },
     animate: {
         opacity: 1,
-        y:0,
+        y: 0,
         transition: {
             duration: 1,
         },
@@ -32,14 +32,15 @@ const AnimatedTitle = ({ text, className = '' }) => {
     return (
         <div className='w-full mx-auto py-2 flex items-center justify-center text-center overflow-hidden sm:p-0'>
             <motion.h1
-                className={`inline-block w-full text-slate-900 dark:text-light font-bold capitalize text-8xl ${className}`}
+                className={`inline-block w-full text-slate-900 dark:text-light font-bold capitalize text-6xl ${className}`}
                 variants={quote}
                 initial='initial'
                 animate='animate'>
                 {text.split(' ').map((elem, ind) => (
-                    <motion.span key={elem + '-' + ind} className='inline-block'
-                    variants={word}
-                    >
+                    <motion.span
+                        key={elem + '-' + ind}
+                        className='inline-block'
+                        variants={word}>
                         {elem}&nbsp;
                     </motion.span>
                 ))}

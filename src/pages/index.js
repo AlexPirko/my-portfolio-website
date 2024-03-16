@@ -1,13 +1,18 @@
 import Layout from '@/components/Layout';
 import Head from 'next/head';
 import Image from 'next/image';
-import profileImg from '../../public/dev1.png';
+import profileImg from '../../public/dev.png';
 import AnimatedTitle from '@/components/AnimatedTitle';
 import Link from 'next/link';
 import HireMe from '@/components/HireMe';
 import TransitionEff from '@/components/TransitionEff';
 
 export default function Home() {
+    const imageLoader = ({ src, width, quality }) => {
+        return `https://profile.pirko.site/${src}?w=${width}&q=${
+            quality || 75
+        }`;
+    };
     return (
         <>
             <Head>
@@ -23,10 +28,12 @@ export default function Home() {
                     <div className='flex items-center justify-between w-full gap-10 lg:flex-col'>
                         <div className='w-2/5 xl:w-1/2 md:w-2/3 sm:w-full'>
                             <Image
-                                src={profileImg}
+                                loader={imageLoader}
+                                src='/dev.png'
                                 alt='Developer profile image'
                                 className='w-full h-auto'
-                                priority
+                                width={600}
+                                height={600}
                                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                             />
                         </div>
