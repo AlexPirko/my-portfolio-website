@@ -17,14 +17,23 @@ export default function App({ Component, pageProps }) {
                     name='viewport'
                     content='width=device-width, initial-scale=1'
                 />
-                <link rel='icon' href='/favicon.ico' />
+                <meta
+                    name='freelancehunt'
+                    content='8a7d35db8bd0350'
+                />
+                <link
+                    rel='icon'
+                    href='/favicon.ico'
+                />
             </Head>
 
-            <main
-                className={`${raleway.variable} bg-light dark:bg-dark w-full`}>
+            <main className={`${raleway.variable} bg-light dark:bg-dark w-full`}>
                 <NavBar />
                 <AnimatePresence mode='wait'>
-                    <Component key={router.asPath} {...pageProps} />
+                    <Component
+                        key={router.asPath}
+                        {...pageProps}
+                    />
                 </AnimatePresence>
             </main>
             <Footer />

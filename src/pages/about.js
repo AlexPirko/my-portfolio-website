@@ -9,7 +9,7 @@ import Skills from '@/components/Skills';
 import Experince from '@/components/Experince';
 import Education from '@/components/Education';
 import Courses from '@/components/Courses';
-import TransitionEff from '@/components/TransitionEff';
+// import TransitionEff from '@/components/TransitionEff';
 
 const AnimatedNum = ({ value }) => {
     const ref = useRef(null);
@@ -49,7 +49,7 @@ const about = () => {
                     content='my description'
                 />
             </Head>
-            <TransitionEff />
+            {/* <TransitionEff /> */}
             <main className='flex w-full flex-col items-center justify-center'>
                 <Layout className='pt-16 lg:!pt-24'>
                     <AnimatedTitle

@@ -5,7 +5,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import TransitionEff from '@/components/TransitionEff';
+// import TransitionEff from '@/components/TransitionEff';
 
 const FeaturedProject = ({
     type,
@@ -140,7 +140,7 @@ const projects = () => {
                     content='my description'
                 />
             </Head>
-            <TransitionEff />
+            {/* <TransitionEff /> */}
             <main className='flex w-full flex-col items-center justify-center'>
                 <Layout className='pt-16 lg:!pt-24'>
                     <AnimatedTitle
