@@ -4,20 +4,15 @@ import { motion } from 'framer-motion';
 
 import Logo from './Logo';
 import { useRouter } from 'next/router';
-import {
-    GithubIcon,
-    Instagram,
-    LinkedInIcon,
-    MoonIcon,
-    SunIcon,
-    Telegram,
-} from './SocialIcons';
+import { GithubIcon, Instagram, LinkedInIcon, MoonIcon, SunIcon, Telegram } from './SocialIcons';
 import useThemeSwitcher from '@/hooks/useThemeSwitcher';
 
 const CustomLink = ({ href, title, className = '' }) => {
     const router = useRouter();
     return (
-        <Link href={href} className={`${className} relative group`}>
+        <Link
+            href={href}
+            className={`${className} relative group`}>
             {title}
 
             <span
@@ -81,13 +76,21 @@ const NavBar = () => {
 
             <div className='flex items-center justify-between w-full text-xl lg:hidden'>
                 <nav>
-                    <CustomLink href='/' title='Home' className='mr-4' />
+                    <CustomLink
+                        href='/'
+                        title='Home'
+                        className='mr-4'
+                    />
                     <CustomLink
                         href='/projects'
                         title='Projects'
                         className='mx-4'
                     />
-                    <CustomLink href='/about' title='About' className='ml-4' />
+                    <CustomLink
+                        href='/about'
+                        title='About'
+                        className='ml-4'
+                    />
                 </nav>
 
                 <div className='flex items-center justify-center flex-wrap'>
@@ -126,9 +129,8 @@ const NavBar = () => {
 
                     <button
                         className='ml-10 w-9'
-                        onClick={() =>
-                            setMode(mode === 'light' ? 'dark' : 'light')
-                        }>
+                        aria-label='Theme button'
+                        onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}>
                         {mode === 'dark' ? (
                             <SunIcon className={'fill-slate-800'} />
                         ) : (
@@ -162,8 +164,9 @@ const NavBar = () => {
                     </nav>
 
                     <div className='flex items-center justify-center flex-wrap mt-4'>
-                        <motion.a
+                        <motion.a                            
                             href='https://github.com/AlexPirko'
+                            aria-label="Go to the GitHub page"
                             target={'_blank'}
                             whileHover={{ y: 3 }}
                             whileTap={{ scale: 0.9 }}
@@ -172,6 +175,7 @@ const NavBar = () => {
                         </motion.a>
                         <motion.a
                             href='https://web.telegram.org/k/#@youzhny_dev'
+                            aria-label="Go to the Telegram"
                             target={'_blank'}
                             whileHover={{ y: 3 }}
                             whileTap={{ scale: 0.9 }}
@@ -180,6 +184,7 @@ const NavBar = () => {
                         </motion.a>
                         <motion.a
                             href='https://www.linkedin.com/in/olexandr-pirko/'
+                            aria-label="Go to the LinkedIn"
                             target={'_blank'}
                             whileHover={{ y: 3 }}
                             whileTap={{ scale: 0.9 }}
@@ -188,6 +193,7 @@ const NavBar = () => {
                         </motion.a>
                         <motion.a
                             href='https://www.instagram.com/'
+                            aria-label="Go to the Instagram"
                             target={'_blank'}
                             whileHover={{ y: 3 }}
                             whileTap={{ scale: 0.9 }}
@@ -198,9 +204,7 @@ const NavBar = () => {
                         <motion.button
                             className='ml-10 w-9 bg-light sm:ml-3 sm:w-7 dark:bg-dark'
                             whileHover={{ y: 3 }}
-                            onClick={() =>
-                                setMode(mode === 'light' ? 'dark' : 'light')
-                            }>
+                            onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}>
                             {mode === 'dark' ? (
                                 <SunIcon className={'fill-slate-800'} />
                             ) : (

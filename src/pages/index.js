@@ -30,8 +30,8 @@ export default function Home() {
                                 src='/dev.png'
                                 alt='Developer profile image'
                                 className='w-full h-auto'
-                                width={600}
-                                height={600}
+                                width={390}
+                                height={390}
                                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                                 priority
                             />
@@ -56,6 +56,7 @@ export default function Home() {
                                 </Link>
                                 <Link
                                     href='mailto:youzhny.foto@gmail.com'
+                                    aria-label='Send me E-mail'
                                     target={'_blank'}
                                     className='ml-4 text-lg font-medium capitalize text-slate-900 dark:text-light underline md:ml-8'>
                                     Send Email
